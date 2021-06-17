@@ -1,0 +1,6 @@
+tmpoutput/
+*.iso
+*.tar.xz
+*.vmdk
+*.raw
+*.qcow2

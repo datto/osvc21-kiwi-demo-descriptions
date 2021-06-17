@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<image schemaversion="6.8" name="Container-EL9-Appliance">
+    <description type="system">
+        <author>Neal Gompa</author>
+        <contact>ngompa@datto.com</contact>
+        <specification>Container Appliance based on CentOS 9</specification>
+    </description>
+    <preferences>
+        <version>0.0.1</version>
+        <packagemanager>dnf</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us</keytable>
+        <timezone>UTC</timezone>
+        <rpm-locale-filtering>true</rpm-locale-filtering>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <type image="tbz"/>
+    </preferences>
+    <users>
+        <!-- This should probably be something stronger and encrypted by default: https://osinside.github.io/kiwi/concept_and_workflow/users.html -->
+        <user password="linux" pwdformat="plain" home="/root" name="root" groups="root"/>
+    </users>
+    <repository type="rpm-md" alias="CentOS9-CRB">
+        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/CRB/x86_64/os/"/>
+    </repository>
+    <repository type="rpm-md" alias="CentOS9-AppStream">
+        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/AppStream/x86_64/os/"/>
+    </repository>
+    <repository type="rpm-md" alias="CentOS9-BaseOS">
+        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/BaseOS/x86_64/os/"/>
+    </repository>
+    <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="centos-stream-release"/>
+        <package name="passwd"/>
+        <package name="shadow-utils"/>
+        <package name="glibc-langpack-en"/>
+        <package name="yum"/>
+        <package name="yum-utils"/>
+        <package name="systemd"/>
+        <package name="findutils"/>
+        <package name="sed"/>
+        <package name="basesystem"/>
+    </packages>
+</image>
