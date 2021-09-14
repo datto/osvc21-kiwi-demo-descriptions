@@ -22,13 +22,13 @@
         <user password="linux" pwdformat="plain" home="/root" name="root" groups="root"/>
     </users>
     <repository type="rpm-md" alias="CentOS9-CRB">
-        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/CRB/x86_64/os/"/>
+        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/CRB/x86_64/os/"/>
     </repository>
     <repository type="rpm-md" alias="CentOS9-AppStream">
-        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/AppStream/x86_64/os/"/>
+        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/AppStream/x86_64/os/"/>
     </repository>
     <repository type="rpm-md" alias="CentOS9-BaseOS">
-        <source path="https://odcs.stream.centos.org/test/latest-CentOS-Stream/compose/BaseOS/x86_64/os/"/>
+        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/BaseOS/x86_64/os/"/>
     </repository>
     <packages type="bootstrap">
         <package name="filesystem"/>
