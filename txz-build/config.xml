@@ -21,14 +21,14 @@
         <!-- This should probably be something stronger and encrypted by default: https://osinside.github.io/kiwi/concept_and_workflow/users.html -->
         <user password="linux" pwdformat="plain" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="rpm-md" alias="CentOS9-CRB">
-        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/CRB/x86_64/os/"/>
+    <repository type="rpm-md" alias="CentOS9-CRB" sourcetype="metalink">
+        <source path="https://mirrors.centos.org/metalink?repo=centos-crb-9-stream&amp;arch=x86_64"/>
     </repository>
-    <repository type="rpm-md" alias="CentOS9-AppStream">
-        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/AppStream/x86_64/os/"/>
+    <repository type="rpm-md" alias="CentOS9-AppStream" sourcetype="metalink">
+        <source path="https://mirrors.centos.org/metalink?repo=centos-appstream-9-stream&amp;arch=x86_64"/>
     </repository>
-    <repository type="rpm-md" alias="CentOS9-BaseOS">
-        <source path="https://composes.stream.centos.org/production/latest-CentOS-Stream/compose/BaseOS/x86_64/os/"/>
+    <repository type="rpm-md" alias="CentOS9-BaseOS" sourcetype="metalink">
+        <source path="https://mirrors.centos.org/metalink?repo=centos-baseos-9-stream&amp;arch=x86_64"/>
     </repository>
     <packages type="bootstrap">
         <package name="filesystem"/>
